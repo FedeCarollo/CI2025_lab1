@@ -16,7 +16,7 @@ The objective is to maximize fitness.
 
 My approach was to give
 - Total value in all knapsacks for feasible solution
-- Negative fitness for unfeasible solution
+- Large negative fitness for unfeasible solution (in theory any non positive fitness should work)
 
 ### Simulated annealing
 To help the program escape from local minima, if the solution is worse than current solution but **still feasible**, then with probability $\epsilon$ accept that solution either way
