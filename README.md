@@ -1,15 +1,34 @@
 # Multidimensional Knapsack
 ### Solution format
 Initial solution is
-- A zero solution by default
-- A user provided initial solution
+- A zero solution by default (i.e. no items selected in any knapsack)
+- A user provided initial solution (assuming it is provided in the right format)
 
-**My program assumes solutions at each step are feasible**, so I make the initial solution feasible (if not already)
+**The program assumes solutions at each step are feasible**, so I make the initial solution feasible (if not already)
 
 ### Solution Tweaking
 Tweaking phase is composed of two steps
 - Randomly select/deselect an object from any knapsack
 - Randomly swap to items (taken or not) from two knapsacks
+
+#### Efficacy of Random Swapping
+Simulation results demonstrate that random swapping exhibits dimension-dependent performance characteristics:
+
+##### Empirical Observations:
+
+Random swapping significantly improves solution quality in high-dimensional problems with multiple knapsacks.
+
+Its impact becomes negligible in low-dimensional problem instances.
+
+##### Analysis:
+
+Random swapping functions as an alternative selection/deselection mechanism that operates through item exchange rather than direct modification. This approach enables enhanced search space exploration in high-dimensional settings, as simultaneous item swaps between knapsacks facilitate access to solution configurations unreachable through standard insert/remove operations. Consequently, the algorithm gains broader neighborhood visibility.
+
+Conversely, in low-dimensional spaces, random swapping reduces to a compressed sequence of select/deselect operations, offering no substantial advantage over simpler operators since the search space remains adequately explorable through conventional moves.
+
+##### Conclusion: 
+
+Random swapping effectiveness scales with problem complexity, serving as a beneficial diversification operator only when dimensionality necessitates more sophisticated exploration mechanisms.
 
 ### Solution fitness
 The objective is to maximize fitness.
