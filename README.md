@@ -7,16 +7,20 @@ Initial solution is
 **The program assumes solutions at each step are feasible**, so I make the initial solution feasible (if not already)
 
 ### Solution Tweaking
-Tweaking phase is composed of two steps
+Tweaking phase just performs
 - Randomly select/deselect an object from any knapsack
+
+I also tried adding this step (commented in the notebook)
 - Randomly swap to items (taken or not) from two knapsacks
+
+And here is what I found
 
 #### Efficacy of Random Swapping
 Simulation results demonstrate that random swapping exhibits dimension-dependent performance characteristics:
 
 ##### Empirical Observations:
 
-Random swapping significantly improves solution quality in high-dimensional problems with multiple knapsacks.
+Random swapping significantly improves solution convergence in high-dimensional problems with multiple knapsacks.
 
 Its impact becomes negligible in low-dimensional problem instances.
 
