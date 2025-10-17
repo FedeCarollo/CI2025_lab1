@@ -10,8 +10,12 @@ Initial solution is
 Tweaking phase just performs
 - Randomly select/deselect an object from any knapsack
 
-I also tried adding this step (commented in the notebook)
-- Randomly swap to items (taken or not) from two knapsacks
+**I found that randomizing the number of selections actually makes solution fitness worse than just doing one in each iteration.**
+
+It also seems that finer techniques (like exponential decay, temperature) make the solution worse instead of better
+
+I also tried adding this step
+- Randomly swap two items (taken or not) from two knapsacks
 
 And here is what I found
 
